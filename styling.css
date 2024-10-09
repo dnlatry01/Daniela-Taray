@@ -1,54 +1,94 @@
+/* Styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 20px;
+}
 
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h2 {
-            text-align: center;
-        }
-        table {
-            width: 80%;
-            margin: 0 auto;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #000;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .checkbox {
-            display: inline-block;
-            width: 25px;
-            height: 25px;
-            border: 1px solid #000;
-            margin-right: 5px;
-        }
-        .grade-output {
-            font-weight: bold;
-            font-size: 1.5em;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .compute-btn {
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-        .compute-btn:hover {
-            background-color: #45a049;
-        }
-    </style>
+/* Heading */
+h2 {
+    text-align: center;
+    color: #005f73;
+    margin-bottom: 20px;
+}
 
+/* Table styling */
+table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
 
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
 
+th {
+    background-color: #94d2bd;
+    color: white;
+    text-align: center;
+}
 
+td input[type="text"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Button styling */
+.compute-btn {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #028090;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.compute-btn:hover {
+    background-color: #05668d;
+}
+
+/* Grade output styling */
+.grade-output {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.grade-output b {
+    font-size: 24px;
+    color: #007f5f;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    table, h2 {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .compute-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+        }

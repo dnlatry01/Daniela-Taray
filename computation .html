@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Computation</title>
+     <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+
+    <h2>Computation of Grades</h2>
+
+    <table>
+        <tr>
+            <th colspan="3">WRITTEN TASKS</th>
+        </tr>
+        <tr>
+            <th>Quiz</th>
+            <th>Score</th>
+            <th>Range</th>
+        </tr>
+        <tr>
+            <td>Quiz 1</td>
+            <td><input type="text" id="quiz1" value="45"></td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>Quiz 2</td>
+            <td><input type="text" id="quiz2" value="28"></td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Quiz 3</td>
+            <td><input type="text" id="quiz3" value="15"></td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Compute Quizzes</td>
+            <td colspan="2" id="totalQuizzes">88</td>
+        </tr>
+    </table>
+    <button class="compute-btn" onclick="computeQuizzes()">Compute Quizzes</button>
+
+    <table>
+        <tr>
+            <th colspan="3">PERFORMANCE TASKS</th>
+        </tr>
+        <tr>
+            <td>Performance Task 1</td>
+            <td><input type="text" id="pt1" value="30"></td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td>Performance Task 2</td>
+            <td><input type="text" id="pt2" value="28"></td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Performance Task 3</td>
+            <td><input type="text" id="pt3" value="15"></td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Compute Performance Task</td>
+            <td colspan="2" id="totalPTask">91.25</td>
+        </tr>
+    </table>
+    <button class="compute-btn" onclick="computePerformanceTask()">Compute Performance Task</button>
+
+    <table>
+        <tr>
+            <th colspan="3">EXAM</th>
+        </tr>
+        <tr>
+            <td>Periodical Exam 3</td>
+            <td><input type="text" id="exam" value="51"></td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>Compute Exam</td>
+            <td colspan="2" id="totalExam">85</td>
+        </tr>
+    </table>
+    <button class="compute-btn" onclick="computeExam()">Compute Exam</button>
+
+    <table>
+        <tr>
+            <th colspan="2">GRADE</th>
+            <td id="finalGrade"><b>89.35</b></td>
+        </tr>
+    </table>
+    <button class="compute-btn" onclick="computeFinalGrade()">Compute Final Grade</button>
+
+    <div class="grade-output">
+        <p>Final Grade: <b id="finalGradeDisplay">89.35</b></p>
+    </div>
+
+    <script>
+        function computeQuizzes() {
+            const quiz1 = parseFloat(document.getElementById('quiz1').value) || 0;
+            const quiz2 = parseFloat(document.getElementById('quiz2').value) || 0;
+            const quiz3 = parseFloat(document.getElementById('quiz3').value) || 0;
+
+            // Assuming total range
+            const totalQuizzes = ((quiz1 / 60) * 100 + (quiz2 / 30) * 100 + (quiz3 / 20) * 100) / 3;
+
+            document.getElementById('totalQuizzes').innerText = totalQuizzes.toFixed(2);
+        }
+
+        function computePerformanceTask() {
+            const pt1 = parseFloat(document.getElementById('pt1').value) || 0;
+            const pt2 = parseFloat(document.getElementById('pt2').value) || 0;
+            const pt3 = parseFloat(document.getElementById('pt3').value) || 0;
+
+            // Assuming total range
+            const totalPTask = ((pt1 / 35) * 100 + (pt2 / 30) * 100 + (pt3 / 15) * 100) / 3;
+
+            document.getElementById('totalPTask').innerText = totalPTask.toFixed(2);
+        }
+
+        function computeExam() {
+            const exam = parseFloat(document.getElementById('exam').value) || 0;
+
+            // Assuming total range
+            const totalExam = (exam / 60) * 100;
+
+            document.getElementById('totalExam').innerText = totalExam.toFixed(2);
+        }
+
+        function computeFinalGrade() {
+            const totalQuizzes = parseFloat(document.getElementById('totalQuizzes').innerText) || 0;
+            const totalPTask = parseFloat(document.getElementById('totalPTask').innerText) || 0;
+            const totalExam = parseFloat(document.getElementById('totalExam').innerText) || 0;
+
+            // Weightage calculation
+            const finalGrade = (totalQuizzes * 0.20) + (totalPTask * 0.60) + (totalExam * 0.20);
+
+            // Display the final grade
+            document.getElementById('finalGradeDisplay').innerText = finalGrade.toFixed(2);
+            document.getElementById('finalGrade').innerText = finalGrade.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makeup Store</title>
+  <link rel=stylesheet href="style.css"
+</head>
+<body>
+  <h1>Makeup Store</h1>
+  <div id="product-list"></div>
+
+  <footer>Designed by Daniela Taray</footer>
+
+  <script>
+    fetch('makeup.json')
+      .then(response => response.json())
+      .then(data => {
+        const productList = document.getElementById('product-list');
+        data.forEach(product => {
+          const productDiv = document.createElement('div');
+          productDiv.className = 'product';
+          productDiv.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h2>${product.name}</h2>
+            <p>${product.description}</p>
+            <p>Price: ₱${product.price}</p>
+          `;
+          productList.appendChild(productDiv);
+        });
+      })
+      .catch(error => console.error('Error fetching the products:', error));
+  </script>
+</body>
+</html>

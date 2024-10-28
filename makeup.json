@@ -1,0 +1,63 @@
+
+[
+  {
+    "name": "Foundation",
+    "description": "Long-lasting foundation for a flawless base.",
+    "image": "foundation.jpg",
+    "price": 1200
+  },
+  {
+    "name": "Concealer",
+    "description": "Creamy concealer to cover blemishes and dark circles.",
+    "image": "concealer.jpg",
+    "price": 1000
+  },
+  {
+    "name": "Blush",
+    "description": "Powder blush for a natural, rosy glow.",
+    "image": "blush.jpg",
+    "price": 600
+  },
+  {
+    "name": "Eyeshadow Palette",
+    "description": "A palette with a variety of colors for versatile eye looks.",
+    "image": "eyeshadow_palette.jpg",
+    "price": 1500
+  },
+  {
+    "name": "Mascara",
+    "description": "Waterproof mascara for voluminous lashes.",
+    "image": "mascara.jpg",
+    "price": 280
+  },
+  {
+    "name": "Eyeliner",
+    "description": "Liquid eyeliner for precise, bold lines.",
+    "image": "eyeliner.jpg",
+    "price": 250
+  },
+  {
+    "name": "Lipstick",
+    "description": "Matte lipstick in various shades for all-day wear.",
+    "image": "lipstick.jpg",
+    "price": 900
+  },
+  {
+    "name": "Highlighter",
+    "description": "Shimmering highlighter for a radiant glow.",
+    "image": "highlighter.jpg",
+    "price": 200
+  },
+  {
+    "name": "Setting Spray",
+    "description": "Setting spray to keep makeup in place all day.",
+    "image": "setting_spray.jpg",
+    "price": 350
+  },
+  {
+    "name": "Makeup Brushes Set",
+    "description": "A set of brushes for flawless makeup application.",
+    "image": "makeup_brushes.jpg",
+    "price": 500
+  }
+]

@@ -1,71 +1,87 @@
-/* Basic Styles */
-body {
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-header h1 {
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f9;
     color: #333;
+    margin: 20px;
 }
 
-.game-container {
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #444;
+}
+
+/* Containers */
+.draggableContainer, .droppableContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Draggable boxes */
+.box {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.draggable-container, .droppable-container {
-    display: flex;
-    gap: 15px;
-    margin: 20px;
     justify-content: center;
-}
-
-.item {
-    width: 100px;
+    width: 80px;
     height: 100px;
-    background-color: #3498db;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 5px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #fff;
     cursor: grab;
-    border-radius: 8px;
-    transition: background-color 0.3s;
 }
 
-.item.dragging {
-    opacity: 0.5;
+.box img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
 }
 
-.target {
-    width: 120px;
-    height: 120px;
-    background-color: #ecf0f1;
+.box p {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Droppable areas */
+.droppable {
+    width: 80px;
+    height: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    border: 2px dashed #bdc3c7;
-    border-radius: 8px;
-    transition: background-color 0.3s;
+    justify-content: center;
+    border: 2px dashed #333;
+    border-radius: 5px;
+    background-color: #eee;
 }
 
-.target.correct {
-    background-color: #2ecc71; /* Green for correct match */
-}
-
-.scoreboard {
-    margin-top: 20px;
+/* Feedback board */
+.board {
+    text-align: center;
     font-size: 18px;
+    padding: 10px;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .draggable-container, .droppable-container {
-        flex-direction: column;
-        align-items: center;
-    }
+#remarks {
+    color: #007bff;
+}
+
+#scores {
+    font-weight: bold;
+    color: #4CAF50;
 }

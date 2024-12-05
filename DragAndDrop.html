@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="games.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Matching Puzzle Game</h1>
+    </header>
+    <div class="game-container">
+        <div class="draggable-container">
+            <!-- Draggable items -->
+            <div class="item" draggable="true" id="item1">Apple</div>
+            <div class="item" draggable="true" id="item2">Banana</div>
+            <div class="item" draggable="true" id="item3">Carrot</div>
+            <div class="item" draggable="true" id="item4">Broccoli</div>
+        </div>
+
+        <div class="droppable-container">
+            <!-- Droppable items with correct matches -->
+            <div class="target" data-match="item1">Fruit</div>
+            <div class="target" data-match="item2">Fruit</div>
+            <div class="target" data-match="item3">Vegetable</div>
+            <div class="target" data-match="item4">Vegetable</div>
+        </div>
+        
+        <div class="scoreboard">
+            <p>Score: <span id="score">0</span></p>
+            <p id="status"></p>
+        </div>
+    </div>
+</body>
+</html>
